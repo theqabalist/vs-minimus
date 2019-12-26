@@ -9,12 +9,12 @@ in    s.activityBar
         (   c.base03 t.background
           # c.base03 (t.drop t.background)
           # c.base00 t.foreground
-          # c.pointOut (t.inactive t.foreground)
+          # c.blue (t.inactive t.foreground)
           # c.unset t.border
         )
-    # s.activityBarBadge (c.yellow t.background # c.pointOut t.foreground)
+    # s.activityBarBadge (c.magenta t.background # c.abs.base3 t.foreground)
     # s.activityBar
-        (   c.pointOut (t.active t.border)
+        (   c.blue (t.active t.border)
           # c.unset (t.active t.background)
           # c.unset (t.active (t.focus t.border))
         )

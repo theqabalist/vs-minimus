@@ -5,4 +5,4 @@ let t = ../vscode/targets.dhall /\ ../vscode/modifiers.dhall
 
 let c = ../vscode/colors.dhall
 
-in  s.badge (c.base1 t.background # c.pointOut t.foreground)
+in  s.badge (c.magenta t.background # c.abs.base3 t.foreground)

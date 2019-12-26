@@ -9,10 +9,10 @@ let t = ../vscode/targets.dhall /\ ../vscode/modifiers.dhall
 
 let c = ../vscode/colors.dhall
 
-in    c.base2 (t.focus t.border)
+in    c.base00 (t.focus t.border)
     # c.base1 t.foreground
     # s.widget (Target/colorize (Some (op.op25 "#000000")) t.shadow)
     # s.selection (c.base2 t.background)
-    # c.unset (t.description t.foreground)
+    # c.pointOut (t.description t.foreground)
     # c.unset (t.error t.foreground)
     # s.icon (c.base1 t.foreground)

@@ -73,8 +73,8 @@ in    s.editor (c.base03 t.background # c.base1 t.foreground)
         (c.unset t.border # c.unset t.opacity # c.unset t.border)
     # s.editorGutter
         (   c.unset t.background
-          # c.unset (t.modified t.background)
-          # c.unset (t.added t.background)
-          # c.unset (t.deleted t.background)
-          # c.unset (t.comment (t.range t.foreground))
+          # c.yellow (t.modified t.background)
+          # c.green (t.added t.background)
+          # c.red (t.deleted t.background)
+          # c.blue (t.comment (t.range t.foreground))
         )

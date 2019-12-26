@@ -6,8 +6,8 @@ let t = ../vscode/targets.dhall /\ ../vscode/modifiers.dhall
 let c = ../vscode/colors.dhall
 
 in  s.dropdown
-      (   c.base2 t.background
-        # c.pointOut t.border
+      (   c.base02 t.background
+        # c.base0 t.border
         # c.unset (t.list t.background)
-        # c.unset t.foreground
+        # c.base1 t.foreground
       )

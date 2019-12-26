@@ -6,7 +6,7 @@ let t = ../vscode/targets.dhall /\ ../vscode/modifiers.dhall
 let c = ../vscode/colors.dhall
 
 in  s.settings
-      (   c.unset (t.header t.foreground)
+      (   c.base1 (t.header t.foreground)
         # c.unset (t.modified (t.item t.indicator))
         # c.unset (t.dropdown t.background)
         # c.unset (t.dropdown t.foreground)

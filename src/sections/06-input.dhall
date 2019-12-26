@@ -8,7 +8,7 @@ let c = ../vscode/colors.dhall
 in    s.input
         (   c.base02 t.background
           # c.unset t.border
-          # c.base01 t.foreground
+          # c.base1 t.foreground
           # c.base01 (t.placeholder t.foreground)
         )
     # s.inputOption
