@@ -1,0 +1,30 @@
+{
+    "name": "minimus-syntax",
+    "displayName": "minimus-syntax",
+    "description": "Truly minimal syntax highlighting",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "scripts": {
+        "build": "scripts/format.sh && dhall-to-json --file src/theme.dhall --output themes/Minimus-Dark-color-theme.json && LIGHT_MODE=True dhall-to-json --file src/theme.dhall --output themes/Minimus-Light-color-theme.json",
+        "format": "scripts/format.sh"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Minimus (Light)",
+                "uiTheme": "vs",
+                "path": "./themes/Minimus-light-color-theme.json"
+            },
+            {
+                "label": "Minimus (Dark)",
+                "uiTheme": "vs",
+                "path": "./themes/Minimus-dark-color-theme.json"
+            }
+        ]
+    }
+}
