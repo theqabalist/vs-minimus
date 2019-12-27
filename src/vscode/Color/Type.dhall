@@ -1,1 +1,1 @@
-let Entry = https://prelude.dhall-lang.org/Map/Entry in List (Entry Text Text)
+let Map = https://prelude.dhall-lang.org/Map/Type in Map Text Text
