@@ -1,14 +1,15 @@
 -- https://code.visualstudio.com/api/references/theme-color#integrated-terminal-colors
 let s = ../vscode/scopes.dhall
 
-let t = ../vscode/targets.dhall /\ ../vscode/modifiers.dhall
+let t = ../vscode/targets.dhall ∧ ../vscode/modifiers.dhall
 
 let c = ../vscode/colors.dhall
 
 in  s.terminal
       (   c.unset t.background
         # c.unset t.border
-        # c.unset t.foreground
+        # c.base0 t.foreground
+        # c.unset (t.selection t.background)
         # c.base0 (t.ansi t.black)
         # c.blue (t.ansi t.blue)
         # c.base1 (t.ansi (t.bright t.black))

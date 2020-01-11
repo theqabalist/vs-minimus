@@ -12,6 +12,7 @@
         "format": "scripts/format.sh",
         "start": "nodemon -w './src/**/*.dhall' -e 'dhall' -x 'yarn build:simple'"
     },
+    "publisher": "BrandonKeown",
     "categories": [
         "Themes"
     ],

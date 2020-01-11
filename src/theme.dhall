@@ -49,6 +49,7 @@ in  { name = mod.name
         # ./sections/33-snippets.dhall
         # ./sections/34-symbol-icons.dhall
         # ./sections/35-debug-icons.dhall
+        # ./sections/36-gitlens.dhall
     , tokenColors =
           c.base1
             (None Text)

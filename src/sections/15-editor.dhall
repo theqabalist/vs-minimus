@@ -1,7 +1,7 @@
 -- https://code.visualstudio.com/api/references/theme-color#editor-groups-tabs
 let s = ../vscode/scopes.dhall
 
-let t = ../vscode/targets.dhall /\ ../vscode/modifiers.dhall
+let t = ../vscode/targets.dhall ∧ ../vscode/modifiers.dhall
 
 let c = ../vscode/colors.dhall
 
@@ -39,13 +39,13 @@ in    s.editor (c.base03 t.background # c.base1 t.foreground)
           # c.unset (t.symbol (t.highlight t.background))
           # c.unset (t.symbol (t.highlight t.border))
         )
-    # s.editorWhitespace (c.unset t.foreground)
+    # s.editorWhitespace (c.pointOut t.foreground)
     # s.editorIndentGuide
         (c.base02 t.background # c.base01 (t.active t.background))
     # s.editorRuler (c.base02 t.foreground)
     # s.editorCodeLens (c.unset t.foreground)
-    # s.editorLightBulb (c.unset t.foreground)
-    # s.editorLightBulbAutoFix (c.unset t.foreground)
+    # s.editorLightBulb (c.yellow t.foreground)
+    # s.editorLightBulbAutoFix (c.yellow t.foreground)
     # s.editorBracketMatch (c.unset t.background # c.base01 t.border)
     # s.editorOverviewRuler
         (   c.unset t.border
