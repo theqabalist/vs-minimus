@@ -3,13 +3,13 @@ let Entry = https://prelude.dhall-lang.org/Map/Entry
 let List/map = https://prelude.dhall-lang.org/List/map
 
 let scopeEntry =
-        λ(prefix : Text)
-      → λ(entry : Entry Text Text)
-      → { mapKey = "${prefix}.${entry.mapKey}", mapValue = entry.mapValue }
+      \(prefix : Text) ->
+      \(entry : Entry Text Text) ->
+        { mapKey = "${prefix}.${entry.mapKey}", mapValue = entry.mapValue }
 
 let scope =
-        λ(prefix : Text)
-      → List/map (Entry Text Text) (Entry Text Text) (scopeEntry prefix)
+      \(prefix : Text) ->
+        List/map (Entry Text Text) (Entry Text Text) (scopeEntry prefix)
 
 in  { activityBar = scope "activityBar"
     , activityBarBadge = scope "activityBarBadge"
@@ -64,7 +64,7 @@ in  { activityBar = scope "activityBar"
     , listFilterWidget = scope "listFilterWidget"
     , menu = scope "menu"
     , menubar = scope "menubar"
-    , merge = scope "merge"
+    , merg = scope "merge"
     , minimap = scope "minimap"
     , minimapGutter = scope "minimapGutter"
     , notificationCenter = scope "notificationCenter"

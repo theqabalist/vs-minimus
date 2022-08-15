@@ -18,4 +18,4 @@ let accents =
       , adjust-more = op.op15 adjust
       }
 
-in  mod.bases ∧ accents ∧ { abs = (./dark.dhall).bases }
+in  mod.bases /\ accents /\ { abs = (./dark.dhall).bases }

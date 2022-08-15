@@ -1,7 +1,7 @@
 -- https://code.visualstudio.com/api/references/theme-color#editor-widget-colors
 let s = ../vscode/scopes.dhall
 
-let t = ../vscode/targets.dhall ∧ ../vscode/modifiers.dhall
+let t = ../vscode/targets.dhall /\ ../vscode/modifiers.dhall
 
 let c = ../vscode/colors.dhall
 

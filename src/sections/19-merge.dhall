@@ -5,7 +5,7 @@ let t = ../vscode/targets.dhall /\ ../vscode/modifiers.dhall
 
 let c = ../vscode/colors.dhall
 
-in    s.merge
+in    s.merg
         (   c.unset (t.current (t.header t.background))
           # c.unset (t.current (t.content t.background))
           # c.unset (t.incoming (t.header t.background))

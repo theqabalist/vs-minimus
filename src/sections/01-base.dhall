@@ -5,7 +5,7 @@ let op = ../palette/opacity.dhall
 
 let s = ../vscode/scopes.dhall
 
-let t = ../vscode/targets.dhall ∧ ../vscode/modifiers.dhall
+let t = ../vscode/targets.dhall /\ ../vscode/modifiers.dhall
 
 let c = ../vscode/colors.dhall
 

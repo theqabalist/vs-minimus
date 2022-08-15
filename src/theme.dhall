@@ -1,8 +1,6 @@
 let mod =
-            if (./env.dhall).light-mode
-
+      if    (./env.dhall).light-mode
       then  ./palette/light.dhall
-
       else  ./palette/dark.dhall
 
 let c = ./vscode/tokens.dhall
